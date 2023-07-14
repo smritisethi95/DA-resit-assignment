@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+
+        .banner {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(161, 181, 222);
+            overflow: hidden;
+        }
+
+        /* Styling for the menu items */
+        ul.menu li {
+            float: left;
+        }
+
+        /* Styling for the menu item links */
+        ul.menu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Styling for the menu item links on hover */
+        ul.menu li a:hover {
+            background-color: #ddd;
+        }
+
+        .introduction {
+            margin: 10px;
+            text-align: justify;
+            padding: 25px;
+            font-size: 18px;
+            color: grey;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+            font-family: Arial, Helvetica, sans-serif;
+            border-top: 1px solid rgb(161, 181, 222);
+            transition: 0.7s ease-in-out;
+        }
+
+        .introduction h1 {
+            /* margin-top: -35px; */
+            color: #00008B;
+
+        }
+
+        .analysis,
+        .scatter-plot {
+            background-color: rgb(161, 181, 222);
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .bar-chart {
+            margin: 20px;
+        }
+
+        .bar-chart h1 {
+            color: #00008B;
+        }
+
+        .time-series {
+            margin: 20px;
+        }
+
+        .time-series h1 {
+            color: #00008B;
+        }
+
+        .conclusion {
+            padding: 20px 50px;
+            text-align: justify;
+            background-color: rgb(161, 181, 222);
+        }
+
+        .conclusion h1 {
+            color: #00008B;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- menu-bar -->
+    <div class="menu-bar">
+        <ul class="menu">
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#world-map">World Chart</a></li>
+            <li><a href="#bar-chart">Bar Chart</a></li>
+            <li><a href="#scatter">Scatter Plot</a></li>
+            <li><a href="#time">Time Series Chart</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </div>
+
+    <!-- banner -->
+    <div class="banner" style="text-align: center;">
+        <img src="./images/banner.jpg" alt="alternate_text" class="banner">
+    </div>
+
+    <!-- introduction -->
+    <div class="introduction" id="intro">
+        <h1> Covid-19 Pandemic Global Impact</h1>
+        <p>
+            The COVID-19 epidemic has impacted every element of human life. SARS-CoV-2 has caused enormous disruption,
+            disease, and loss since its late 2019 arrival. Understanding this worldwide crisis's trends and effects is
+            essential to developing effective methods to stop the virus's spread.
+
+            This set of visualisations and analyses covers the COVID-19 epidemic in detail. Charts, maps, and graphs
+            show death rates, daily case trends, excess mortality analyses, and immunisation progress.
+            We can learn about the virus's virulence and effects by comparing fatality rates across countries. Trends in
+            new cases show the pandemic's course, indicating surges and assessing containment efforts.
+
+            By comparing pandemic deaths to projected mortality rates, excess mortality helps us comprehend the true
+            pandemic toll. This investigation illuminates COVID-19's hidden effects and public health response efficacy.
+
+            Finally, we discuss immunisation progress. We can evaluate virus immunisation progress by visualising
+            coverage rates and total vaccinations across countries and continents.
+            These visualisations and analysis try to explain the COVID-19 epidemic, its tendencies, and its effects.
+            Data-driven insights can inform decision-making, public awareness, and the worldwide effort to tackle a
+            unique catastrophe.
+        </p>
+    </div>
+
+    <!-- Analysis and visualisations -->
+    <div class="analysis" id="world-map">
+        <h1>Total Cases of Covid-19 Worldwide</h1>
+        <img src="./images/newplot.png" alt="alternate_text" style="height:400px;width:850px;">
+        <figcaption>Fig.1 - Total cases of covid-19 worldwide.</figcaption>
+
+        <div style="width:525px; float:right; margin-top: -425px;">
+
+            <table>
+                <tr>
+                    <th>Statistic</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>No of Countries</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>SUM(Total Cases)</td>
+                    <td>7,911,427,999</td>
+                </tr>
+
+                <tr>
+                    <td>Minimum Cases</td>
+                    <td>27,410</td>
+                </tr>
+                <tr>
+                    <td>Maximum Cases</td>
+                    <td>4,376,685,390</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+    <!-- bar chart -->
+    <div class="bar-chart" id="bar-chart" style="height: 500px;">
+        <h1>Total Cases of Covid-19 by Country</h1>
+        <div style="width:500px; text-align: justify;">
+            <p>
+                This dashboard focuses on the daily trends of COVID-19 cases. The Daily New Cases Trend chart
+                illustrates the overall trend of new cases over time. The New Cases by Date and Continent chart provides
+                a detailed view of the daily new cases by continent, highlighting regions experiencing significant
+                fluctuations. These visualizations help in monitoring the progress of the pandemic and identifying
+                potential hotspots.
+            </p>
+            <p>
+                As seen in the illustration, Australia has the highest number of covid cases (4,37,66,85,390);
+                Bangladesh ranks second with 1,49,28,20,935, or nearly 2 million; Ireland ranks third with 95,46,79,108;
+                and Tunisia ranks last with 74,76,08,315. Comparing the populations of these countries reveals that
+                Bangladesh has the largest population with 2,15,01,00,78,208 people, while Australia has the smallest
+                population with 32,802,94,730 people. Bangladesh has taken considerable steps to maintain a low
+                incidence rate in relation to its population size.
+            </p>
+        </div>
+
+        <div style="float:right; margin-top: -305px;">
+
+            <img src="./images/bar-chart.png" alt="alternate_text" style="height:400px;width:850px;">
+            <figcaption>Fig.2 - Total cases by Country</figcaption>
+        </div>
+    </div>
+
+
+    <div class="scatter-plot" id="scatter">
+        <h1>Total Cases vs New Cases of Covid-19</h1>
+        <img src="./images/scatter-plot.png" alt="alternate_text" style="height:400px;width:650px;">
+        <figcaption>Fig.3 - Total cases vs new cases</figcaption>
+        <div style="text-align:justify;width:700px; float:right; margin-top: -425px;">
+            <p>
+                In the given illustration, we are analysing the total Covid-19 cases vs the New cases of covid-19
+                reported across the globe for the period 2019-2023. As we can see, In the year 2022, the continent
+                oceanic saw a surge in total cases with 2,586,678,271 people infected, while the highest no of New cases
+                reported for this continent was in the year 2022 with nearly 1 million people infected. The second
+                continent which has the highest no of active covid cases is Asia with 714,519,380 active cases followed
+                by Europe with 619,608,892 active cases.
+            </p>
+        </div>
+    </div>
+
+    <div class="time-series" id="time" style="height: 500px;">
+        <h1>Total Cases over Time</h1>
+        <div style="width:590px; text-align: justify;">
+            <p>
+                In this specific data visualisation, the worldwide total of covid-19 cases is given the most attention.
+                Research and estimates indicate that in 2022 and 2023, Australia will again have the highest total
+                number of cases, with 2,58,66,78,271 people infected and 1,75,67,29,139 people, respectively,
+                experiencing active illnesses.
+            </p>
+            <p>
+                The number of cases in Asia will rise to 71,45,19,380 in 2022 from 38,74,84,115 in 2021. As a result,
+                Asia will become the second most populous area in the world. In contrast, Europe will have 61,96,08,892
+                occurrences in 2022, placing it third on the global index. The EU produced this prognostication.
+                In 2022, the total number of recorded active cases across all seven continents reaches a new high. This
+                year also serves as a major plot point.
+            </p>
+        </div>
+        <div style="float:right; margin-top: -245px;">
+            <img src="./images/time-series-chart.png" alt="alternate_text" style="height:400px;width:750px;">
+            <figcaption>Fig.1 - Total cases over Time </figcaption>
+        </div>
+
+    </div>
+
+    <div class="conclusion" id="conclusion">
+        <h1>Conclusion</h1>
+        <p>
+            Ongoing Challenges: The visualizations highlight the persistent challenges posed by the pandemic, including
+            variations in mortality rates, fluctuating case trends, and disparities in vaccination progress. These
+            challenges emphasize the need for continued vigilance, adaptability, and collaboration in responding to the
+            evolving nature of the virus.
+        </p>
+        <p>
+            Data-Driven Decision-Making: The importance of data-driven decision-making is evident in every aspect of
+            combating the pandemic. From implementing effective containment measures to prioritizing vaccination
+            efforts, data analysis provides critical insights for policymakers, healthcare professionals, and
+            researchers. It enables evidence-based strategies, resource allocation, and targeted interventions to
+            mitigate the impact of COVID-19.
+        </p>
+        <p>
+            Global Collaboration: The insights garnered from data analysis underscore the need for global collaboration
+            in tackling the pandemic. Sharing data, best practices, and research findings among countries and
+            international organizations is crucial for devising effective response strategies, developing vaccines, and
+            addressing the ongoing challenges collectively.
+        </p>
+    </div>
+
+
+
+</body>
+
+</html>
